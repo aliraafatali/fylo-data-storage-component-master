@@ -1,0 +1,103 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*{
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+:root{
+/* Primary */
+--Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+/* Neutral */
+--Pale-Blue: hsl(243, 100%, 93%);
+--Grayish-Blue: hsl(229, 7%, 55%);
+--Dark-Blue: hsl(228, 56%, 26%);
+--Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+/* Start media Query  */
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767px) {
+    
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+/* End Media Query */
+/* start page */
+.page{
+    background-image: url(../images/bg-desktop.png);
+    background-color: var(--Very-Dark-Blue);
+    height: 100vh;
+    width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 767PX){
+    .page{
+        background-image: url(../images/bg-mobile.png);
+    }
+}
+.page .container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+}
+.page .container .left-side{
+    background-color: var(--Dark-Blue);
+    width: 230px;
+    height: 140px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -o-border-top-right-radius: 70px;
+    border-top-right-radius: 70px;
+    padding: 35px 0 20px 15px;
+}
+/* start right side */
+.page .container .left-side .logo{
+    width: 100px;
+    padding-bottom: 25px;
+}
+.page .container .left-side .logo img{
+    width: 100%;
+}
+.page .container .left-side .icons img{
+    /* border: 10px solid var(--Very-Dark-Blue); */
+    padding: 10px;
+    border-radius: 6px;
+    background-color: var(--Very-Dark-Blue);
+}
+/* end right side */
+/* start lift side */
+.page .container .right-side{
+    background-color: var(--Dark-Blue);
+    width: 360px;
+    height: 100px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+/* end lift side */
+
+/* end page  */
+
