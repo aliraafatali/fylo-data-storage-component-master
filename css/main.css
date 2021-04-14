@@ -82,8 +82,9 @@
     width: 100%;
 }
 .page .container .left-side .icons img{
-    /* border: 10px solid var(--Very-Dark-Blue); */
-    padding: 10px;
+    border: 10px solid var(--Very-Dark-Blue);
+    /* width: 30px; */
+    height: 30px;
     border-radius: 6px;
     background-color: var(--Very-Dark-Blue);
 }
