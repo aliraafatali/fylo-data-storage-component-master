@@ -10,7 +10,7 @@
 }
 :root{
 /* Primary */
---Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+--Gradient: hsl(6, 100%, 80%),hsl(335, 100%, 65%);
 /* Neutral */
 --Pale-Blue: hsl(243, 100%, 93%);
 --Grayish-Blue: hsl(229, 7%, 55%);
@@ -60,8 +60,14 @@
 }
 .page .container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1440px;
+}
+@media (max-width: 767px){
+    .page .container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 .page .container .left-side{
     background-color: var(--Dark-Blue);
@@ -69,9 +75,15 @@
     height: 140px;
     -o-border-radius: 10px;
     border-radius: 10px;
-    -o-border-top-right-radius: 70px;
-    border-top-right-radius: 70px;
+    -o-border-top-right-radius: 80px;
+    border-top-right-radius: 80px;
     padding: 35px 0 20px 15px;
+}
+@media (max-width: 767px){
+    .page .container .left-side{
+        width: 330px;
+        height: fit-content;
+    }
 }
 /* start right side */
 .page .container .left-side .logo{
@@ -81,22 +93,126 @@
 .page .container .left-side .logo img{
     width: 100%;
 }
-.page .container .left-side .icons img{
-    border: 10px solid var(--Very-Dark-Blue);
-    /* width: 30px; */
-    height: 30px;
-    border-radius: 6px;
+.page .container .left-side .icons{
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.page .container .left-side .icons .icon{
     background-color: var(--Very-Dark-Blue);
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    width: 30px;
+    height: 30px;
+}
+.page .container .left-side .icons .icon img{
+    width: 15px;
+    height: 15px;
 }
 /* end right side */
 /* start lift side */
 .page .container .right-side{
     background-color: var(--Dark-Blue);
+    padding: 30px 0 25px 20px;
     width: 360px;
     height: 100px;
     -o-border-radius: 10px;
     border-radius: 10px;
-    margin-top: 40px;
+    margin: 40px 0 0 20px;
+    position: relative;
+}
+@media (max-width: 767px){
+    .page .container .right-side{
+        width: 330px;
+        margin-left: 0;
+        height: fit-content;
+    }
+}
+.page .container .right-side > p{
+    color: var(--Pale-Blue);
+    padding-bottom: 15px;
+    font-size: 11px;
+}
+.page .container .right-side > p span{
+    color: #ddd;
+    font-weight: 700;
+}
+.page .container .right-side .shap{
+    width: 300px;
+    height: 10px;
+    background-color: var(--Very-Dark-Blue);
+    -o-border-radius: 40px;
+    border-radius: 40px;
+}
+.page .container .right-side .shap .gb{
+    width: 220px;
+    height: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    -o-border-radius: 40px;
+    border-radius: 40px;
+    /* background-image: linear-gradient(to right,hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)); */
+    background-image: linear-gradient(to right,var(--Gradient));
+}
+.page .container .right-side .shap .gb .circle{
+    background-color: white;
+    height: 7px;
+    width: 7px;
+    margin-bottom: .5px;
+    margin-right: 1px;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+.page .container .right-side .text{
+    display: flex;
+    justify-content: space-between;
+    color: #ddd;
+    width: 300px;
+    padding-top: 5px;
+    font-weight: 700;
+}
+.page .container .right-side .gb-left{
+    color: var(--Grayish-Blue);
+    background-color: #E6E7FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 60px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    position: absolute;
+    top: -45px;
+    right: 30px;
+}
+@media (max-width: 767px){
+    .page .container .right-side .gb-left{
+        top: calc(100% - 30px);
+        right: calc(50% - 60px);
+    }
+}
+.page .container .right-side .gb-left::before{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    border-style: solid;
+    border-width: 20px;
+    border-color:transparent #E6E7FA transparent transparent;
+}
+@media (max-width: 767px){
+    .page .container .right-side .gb-left::before{
+        display: none;
+    }
+}
+.page .container .right-side .gb-left span{
+    color: black;
+    font-weight: 700;
+    font-size: 28px;
+    padding-right: 5px;
 }
 /* end lift side */
 
